@@ -164,7 +164,7 @@ public class SubGHz implements RawEventListener{
 		String tmp;
 		System.out.println("name:: \t"+name);
 		String dir = System.getProperty("user.dir");
-		CtrlDeviceList pref = new CtrlDeviceList(dir+"/device.pref");
+		CtrlDeviceList pref = new CtrlDeviceList("/home/pi/driver/LazDriver/device.pref");
 		this.name = name;
 
 		// serch device
