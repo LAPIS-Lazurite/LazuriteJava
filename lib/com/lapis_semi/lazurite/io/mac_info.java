@@ -5,28 +5,28 @@ import java.nio.ByteOrder;
 import javax.xml.bind.DatatypeConverter;
 
 public class mac_info {
-	static byte[] raw;
-	static int command;
-	static long time;
-	static String area;
-	static short ch;
-	static short rate;
-	static short pwr;
-	static int header;
-	static int rxPanid;
-	static byte rxAddrType;
-	static byte[] rxAddr = new byte[8];
-	static int txPanid;
-	static byte txAddrType;
-	static byte[] txAddr = new byte[8];
-	static short rssi;
-	static byte[] payload;
+	static public byte[] raw;
+	static public int command;
+	static public long time;
+	static public String area;
+	static public short ch;
+	static public short rate;
+	static public short pwr;
+	static public int header;
+	static public int rxPanid;
+	static public byte rxAddrType;
+	static public byte[] rxAddr = new byte[8];
+	static public int txPanid;
+	static public byte txAddrType;
+	static public byte[] txAddr = new byte[8];
+	static public short rssi;
+	static public byte[] payload;
 
 	public mac_info(byte[] raw){
 		fromRaw(raw);
 	}
 
-	static void fromRaw(byte[] raw) {
+	static public void fromRaw(byte[] raw) {
 		ByteBuffer buffer = ByteBuffer.wrap(raw);
 		buffer.order(ByteOrder.LITTLE_ENDIAN);
 
@@ -80,7 +80,7 @@ public class mac_info {
 			payload[i-49] = raw[i];
 		}
 	}
-	static boolean comp_txAddr(byte[] txAddr)
+	static public boolean comp_txAddr(byte[] txAddr)
 	{
 		boolean result=false;
 		if(txAddrType == 0) result = true;
