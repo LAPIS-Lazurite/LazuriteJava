@@ -1,9 +1,0 @@
-name=LazuritePiGateway
-device=/dev/bp3596
-option=mode,ch,pwr,rate
-value=2,36,-1,-1
-
-name=LazuritePiGateway1
-device=/dev/testdevice
-option=a,b,c,d
-value=0x10,0x20,0x30,0x40
