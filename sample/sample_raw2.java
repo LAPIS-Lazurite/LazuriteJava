@@ -1,5 +1,3 @@
-package com.lapis_semi.lazurite.io;
-
 import java.util.Formatter;
 import java.util.Properties;
 import java.io.FileInputStream;
@@ -12,6 +10,7 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.Locale;
 import java.text.SimpleDateFormat;
+import com.lapis_semi.lazurite.io.*;
 
 class sample_raw2 { 
 	public sample_raw2(){

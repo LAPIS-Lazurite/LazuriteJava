@@ -1,9 +1,9 @@
-package com.lapis_semi.lazurite.io;
 
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import javax.xml.bind.DatatypeConverter;
+import com.lapis_semi.lazurite.io.*;
 //import com.lapis_semi.lazurite.io.*;
 
 class sample_serial implements SubGHzEventListener{ 
