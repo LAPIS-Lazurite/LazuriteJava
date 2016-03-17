@@ -1,0 +1,3 @@
+#!/bin/sh
+java -classpath ../../../../ com.lapis_semi.lazurite.io.$1
+
