@@ -85,7 +85,7 @@ public class Raw {
 	}
 	public void unload() throws IOException {
 		InputStream IS;
-		// Driverのinsmod
+		// Driver insmod
 		System.out.println("Unload SubGHz driver");
 		try {
 			// rmmod driver
