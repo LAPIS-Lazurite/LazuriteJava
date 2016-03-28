@@ -9,9 +9,9 @@ public class RawEventObject extends EventObject {
 	private static final long serialVersionUID = 1L;
 	private int event;
 
-	public RawEventObject(Object source) {
+	public RawEventObject(int source) {
 		super(source);
-		event = (int)source;
+		event = source;
 	}
 	public int getEventType(){
 		return event;

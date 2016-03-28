@@ -7,9 +7,9 @@ public class SubGHzEventObject extends EventObject {
 	public final static int DATA_AVAILABLE = 0x1;
 	private static final long serialVersionUID = 1L;
 	private int event;
-	public SubGHzEventObject(Object source) {
+	public SubGHzEventObject(int source) {
 		super(source);
-		event = (int)source;
+		event = source;
 	}
 	public int getEventType(){
 		return event;

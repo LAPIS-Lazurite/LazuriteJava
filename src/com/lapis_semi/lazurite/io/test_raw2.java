@@ -17,7 +17,7 @@ class test_raw2 {
 	public test_raw2(){
 	}
 	static public void main(String[] args){
-		SubGHz subghz;
+		final SubGHz subghz;
 		// Initializing SubGHz
 		try {
 			subghz = new SubGHz("LazuritePiGateway");
