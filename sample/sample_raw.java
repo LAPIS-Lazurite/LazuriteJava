@@ -50,12 +50,13 @@ class sample_raw implements SubGHzEventListener{
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd E HH:mm:ss.SSS zZ",Locale.US);
 			Formatter fm = new Formatter();
 			String out = new String(mac_info.payload);
-			fm.format("%s,%s,%d,%d,%d, %08x,%d,%02x%02x%02x%02x%02x%02x%02x%02x, %08x,%d,%02x%02x%02x%02x%02x%02x%02x%02x, %03d,%s",
+			fm.format("%s,%s,%d,%d,%d,%04x,%08x,%d,%02x%02x%02x%02x%02x%02x%02x%02x, %08x,%d,%02x%02x%02x%02x%02x%02x%02x%02x, %03d,%s",
 					sdf.format(time),
 					mac_info.area,
 					mac_info.ch,
 					mac_info.rate,
 					mac_info.pwr,
+					mac_info.header,
 					mac_info.rxPanid,
 					mac_info.rxAddrType,
 					mac_info.rxAddr[0],
