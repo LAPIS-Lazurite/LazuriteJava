@@ -1,0 +1,15 @@
+# コンパイラを指定
+CC :=g++
+# インクルードファイル等
+CFLAGS := -fPIC -shared
+INCLUDE :=-I /usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/include -I  /usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/include/linux/ 
+# ディレクトリ内の全てのC++ファイルをコンパイル
+CFILES =  liblazdriver.c
+# C++ファイルの.cppをとったものを実行ファイルの名前とする
+EXECUTABLE :=$(SOURCES:.c)
+
+all:
+	$(CC) $(CFLAGS) $(CFILES) -o liblazdriver.so $(INCLUDE)
+
+clean:
+	    rm -rf $(EXECUTABLE)
