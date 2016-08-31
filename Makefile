@@ -1,22 +1,26 @@
-#CLASSPATH = -classpath ./jcommon-1.0.23.jar:./jfreechart-1.0.19.jar
 SRCS = $(wildcard $(SRCPATH)/*.java)
 SRCPATH = src/com/lapis_semi/lazurite/io
-LIBPATH =  /usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/jre/lib/ext
+DOCPATH = src/com/lapis_semi/lazurite/io/html
+LIBPATH =  /usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre/lib/ext
 JAVAC = /usr/bin/javac
 JAVA = /usr/bin/java
 JAR = /usr/bin/jar
 
 all:
-	$(JAVAC) -source 1.6 -target 1.6 $(CLASSPATH) -g -Xlint $(SRCS)
+	$(JAVAC) $(CLASSPATH) -g -Xlint $(SRCS)
 
 .PHONY: clean
 clean:
-	rm -f $(SRCPATH)/*.class
-	rm SubGHz.jar 
+	rm -f -r $(SRCPATH)/*.class latex html doxygen_sqlite3.db
+	rm Liblazurite.jar 
 
 install:
-	jar cvf SubGHz.jar -C src/ com
-	sudo cp SubGHz.jar $(LIBPATH)
+	jar cvf Liblazurite.jar -C src/ com
+	sudo cp Liblazurite.jar $(LIBPATH)
 
 uninstall:
-	sudo rm $(LIBPATH)/SubGHz.jar
+	sudo rm $(LIBPATH)/Liblazurite.jar
+doc:
+	doxygen -s $(SRCPATH)
+
+

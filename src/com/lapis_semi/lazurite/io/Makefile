@@ -4,13 +4,13 @@ JAVAC = /usr/bin/javac
 JAVA = /usr/bin/java
 
 all:
-	$(JAVAC) $(CLASSPATH) -g -Xlint $(SRCS)
+	$(JAVAC) $(CLASSPATH)  -g -Xlint $(SRCS)
 
 .PHONY: clean
 clean:
-	rm -f *.class
+	rm -r -f *.class *.jar bak html latex doxygen_sqlite3.db
 
 install:
-	jar cvf SubGHz.jar -C ../../../../ com
-	sudo cp SubGHz.jar /usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/jre/lib/ext/
+	jar cvf Liblazurite.jar -C ../../../../ com
+	sudo cp Liblazurite.jar /usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre/lib/ext/
 
